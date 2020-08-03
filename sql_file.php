@@ -6,8 +6,6 @@ $bdd->query("CREATE DATABASE brico_e_com");
 
 $bdd = new PDO("mysql:host=localhost;dbname=brico_e_com;charset=utf8", "root", "");
 
-// $bdd->query("USE brico_e_com");
-
 $bdd->query("CREATE TABLE `t_users` (
 
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL, 
