@@ -26,7 +26,7 @@ if(!empty($_GET["u_email"]) && !empty($_GET["u_email"])) {
     if(!empty($logged) && $logged == true) {
 
         require "Views/viewHome.php";
-    
+
     } else {
 
         require "Views/viewSignIn.php";

@@ -6,7 +6,7 @@ ob_start(); ?>
 
 <style>
 
-    nav, footer, #p-temp {display: none;}
+    nav, .navbar, footer, #p-temp {display: none;}
 
     #title {
         position: absolute;

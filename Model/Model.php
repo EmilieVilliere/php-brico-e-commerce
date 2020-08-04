@@ -1,7 +1,7 @@
 <?php 
 
 function getBdd() {
-    
+
     $bdd = new PDO('mysql:host=localhost;dbname=brico_e_com;charset=utf8', 'root', '', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)); // gère les exceptions et les erreurs
     return $bdd;
 }
@@ -40,7 +40,16 @@ function getProducts() {
     return $products;
 }
 
-// cateogries function
+function putInfosBasket($id) {
+
+    $bdd = getBdd();
+    $basket = $bdd->prepare("SELECT * FROM t_products WHERE id = ?");
+    $basket->execute(array($id));
+
+    return $basket;
+}
+
+// Categories functions
 
 function getCategories() {
 
@@ -49,3 +58,18 @@ function getCategories() {
     return $categories;
 }
 
+function filterSearch($data) {
+
+    $bdd = getBdd();
+    $req = $bdd->prepare("SELECT * FROM t_categories WHERE id=?");
+    $req->execute(array($data));
+
+    if($req->rowCount() == 1) {
+
+        return $req->fetch();
+    
+    } else {
+        
+        return false;
+    }
+}

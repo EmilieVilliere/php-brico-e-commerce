@@ -41,7 +41,7 @@
                         foreach($categories as $category) : ?>
 
                         <li class="nav-item">
-                            <a class="nav-link text-white items" href="#"> <?= $category["c_name"] ?> </a>
+                            <a class="nav-link text-white items" href="#!"> <?= $category["c_name"] ?> </a>
                         </li>
                            
                         <?php endforeach; ?>
@@ -49,15 +49,15 @@
                 
                     <!-- Account and Basket -->
                     <div class="account form-inline my-2 my-lg-0">
-                        <a class="nav-link text-white items" href="#">Mon compte</a>
-                        <button class="btn btn-light my-2 my-sm-0" type="submit">Panier 0 </button>
+                        <button class="btn btn-light my-2 my-sm-0" type="submit">Panier</button>
+                        <a class="nav-link text-white items" href="#">Déconnexion</a>
                     </div>
                 </class>
             </div>
         </nav>
         <!-- End NavBar -->
 
-        <a href="index.php"><h1 id="title">Bricofou</h1></a>
+        <a href="Views/viewHome.php"><h1 id="title">Bricofou</h1></a>
         <p id="p-temp">Bienvenue sur Bricofou !</p> 
     </header>
 
