@@ -1,11 +1,10 @@
 <?php
 
-$title= "Movizz - Liste";
+$title= "Bricofou - Accueil";
 
 ob_start(); ?>
 
-
-
+<h1>nik toi bien</h1>
 
 
 <?php 

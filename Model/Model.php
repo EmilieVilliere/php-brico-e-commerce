@@ -5,6 +5,8 @@ function getBdd() {
     return $bdd;
 }
 
+// Users functions
+
 function createUser($data) {
 
     $bdd = getBdd();
@@ -12,3 +14,21 @@ function createUser($data) {
     $create->execute($data);
     
 }
+
+function getUsers($data) {
+
+    $bdd = getBdd();
+    $users = $bdd->prepare("SELECT * FROM t_users WHERE u_email=?");
+    $users->execute(array($data));
+
+    if($users->rowCount() == 1) {
+
+        return $users->fetch();
+    
+    } else {
+        
+        return false;
+    }
+
+}
+

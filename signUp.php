@@ -1,6 +1,6 @@
 <?php
 
-require_once "Model/Model.php";
+require "Model/Model.php";
 
 if(isset($_POST["u_name"]) && isset($_POST["u_email"])) {
 
@@ -9,15 +9,13 @@ if(isset($_POST["u_name"]) && isset($_POST["u_email"])) {
 
         $data = array(
     
-            $b_title = $_POST["u_name"],
-            $b_author =  $_POST["u_email"],
-            $b_edition = $_POST["u_password"],
+            $u_name = $_POST["u_name"],
+            $u_email =  $_POST["u_email"],
+            $u_password = $_POST["u_password"],
            
         );
-    
-        var_dump($data);
         
-        // createUser($data);
+        createUser($data);
     }
 }
 
@@ -36,3 +34,4 @@ if(isset($_POST["u_name"]) && isset($_POST["u_email"])) {
 // }
 
 require "Views/viewSignUp.php";
+

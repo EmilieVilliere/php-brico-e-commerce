@@ -17,7 +17,7 @@ ob_start(); ?>
 </style>
 
 <div class="text-center">
-    <form class="form-sign-in">
+    <form class="form-sign-in" action="signIn.php" method="GET">
 
         <img class="mb-4" src="images/brico-logo.png" alt="" width="100" height="100">
         <h1 class="h3 mb-3 font-weight-normal">Veuillez vous connecter</h1>
@@ -29,10 +29,10 @@ ob_start(); ?>
         <input type="password" id="u_password" name="u_password" class="form-control" required="">
 
         <div class="mb-3 mt-2">
-            <a href="/brico_e_com/Views/viewSignIn.php">Je m'inscris !</a>
+            <a href="signUp.php">Je m'inscris !</a>
         </div>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Connexion</button>
+        <button class="btn btn-lg btn-primary btn-block" name="submit" type="submit">Connexion</button>
         <p class="mt-5 mb-3 text-muted">© 2020</p>
 
     </form>

@@ -30,7 +30,7 @@ ob_start(); ?>
 <div class="text-center">
     <form class="form-sign-up" action="signUp.php" method="post">
 
-        <img class="mb-4" src="./images/brico-logo.png" alt="" width="100" height="100">
+        <img class="mb-4" src="../images/brico-logo.png" alt="" width="100" height="100">
         <h1 class="h3 mb-3 font-weight-normal">Incription</h1>
 
         <label for="u_name" class="sr-only">Nom</label>
@@ -46,7 +46,7 @@ ob_start(); ?>
             <a href="/brico_e_com/index.php">Retour à la connexion</a>
         </div>
 
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Envoyer !</button>
+        <button class="btn btn-lg btn-primary btn-block" name="submit" type="submit">Envoyer !</button>
         <p class="mt-5 mb-3 text-muted">© 2020</p>
 
     </form>
@@ -58,4 +58,4 @@ ob_start(); ?>
 
 $content = ob_get_clean(); 
 
-require_once "./template.php"; ?>
+require "Views/template.php"; ?>
