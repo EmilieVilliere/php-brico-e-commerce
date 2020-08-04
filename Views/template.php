@@ -13,19 +13,63 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+
+    <style>
+        body {display: block;}
+        footer {background-color: #1EA1F5;}
+
+        .navbar { background-color: #1EA1F5;}
+        .items { opacity: 60%; text-transform: uppercase; }
+        .items:hover { opacity: 100%; }
+    </style>
+
     <header>
+        <!-- NavBar Bootstrap -->
+        <nav class="navbar navbar-expand-lg navbar-light mb-5">
+            <div class="container">
+                <!-- Toggle Button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarItems" aria-controls="navbarItems" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- NavBar Navigation -->
+                <class class="collapse navbar-collapse" id="navbarItems">
+                    <ul class="navbar-nav ml-auto mr-auto">
+                        <!-- categories display in nav -->
+                    <?php
+                        $categories = getCategories();
+                        foreach($categories as $category) : ?>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white items" href="#"> <?= $category["c_name"] ?> </a>
+                        </li>
+                           
+                        <?php endforeach; ?>
+                    </ul>
+                
+                    <!-- Account and Basket -->
+                    <div class="account form-inline my-2 my-lg-0">
+                        <a class="nav-link text-white items" href="#">Mon compte</a>
+                        <button class="btn btn-light my-2 my-sm-0" type="submit">Panier 0 </button>
+                    </div>
+                </class>
+            </div>
+        </nav>
+        <!-- End NavBar -->
+
         <a href="index.php"><h1 id="title">Bricofou</h1></a>
         <p id="p-temp">Bienvenue sur Bricofou !</p> 
     </header>
 
     <main>
-        <div id="container">
-            <?= $content ?>
-        </div>
+        <?= $content ?>
     </main>
 
+
     <footer>
-        Voici une description rapide de vos films préférés 
+        <div class="footer-copyright text-center text-white py-3 mt-4">© 2020 Voici votre nouveau site :
+            <a href="https://mdbootstrap.com/" class="text-white">Bricofou !</a>
+        </div>
     </footer>
 
     <!-- Lien CDN JS Bootstrap -->

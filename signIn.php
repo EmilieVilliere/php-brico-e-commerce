@@ -23,8 +23,6 @@ if(!empty($_GET["u_email"]) && !empty($_GET["u_email"])) {
     $infos = array($_GET["u_email"], $_GET["u_password"]);
     $logged = checkUsers($infos);
 
-    var_dump($logged);
-
     if(!empty($logged) && $logged == true) {
 
         require "Views/viewHome.php";
